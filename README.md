@@ -1,4 +1,4 @@
-# 🔗 CertChain PRO
+# CertChain PRO
 
 **Blockchain-based certificate verification** — tamper-proof credential issuance and validation using Ethereum smart contracts, IPFS decentralized storage, and RSA cryptographic signatures.
 
@@ -9,19 +9,19 @@
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---|---|
-| 🔐 SHA-256 Hashing | Every certificate gets a unique cryptographic fingerprint — any tampering is instantly detectable |
-| ⛓️ On-chain Verification | Hashes stored permanently on Ethereum via a Solidity smart contract |
-| 🌐 IPFS Storage | Full certificate data lives on IPFS — decentralized and censorship-resistant |
-| ✍️ RSA-2048 Signatures | Issuer identity cryptographically bound to every credential |
-| ⚡ Real-time Validation | Dual-check pipeline verifies both the digital signature and on-chain record |
+| SHA-256 Hashing | Every certificate gets a unique cryptographic fingerprint — any tampering is instantly detectable |
+| On-chain Verification | Hashes stored permanently on Ethereum via a Solidity smart contract |
+| IPFS Storage | Full certificate data lives on IPFS — decentralized and censorship-resistant |
+| RSA-2048 Signatures | Issuer identity cryptographically bound to every credential |
+| Real-time Validation | Dual-check pipeline verifies both the digital signature and on-chain record |
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 User → Streamlit UI → SHA-256 → RSA Sign → IPFS → Ethereum → Verification
@@ -29,7 +29,7 @@ User → Streamlit UI → SHA-256 → RSA Sign → IPFS → Ethereum → Verific
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 - Python 3.8+
 - [IPFS Desktop or CLI](https://docs.ipfs.tech/install/)
@@ -39,7 +39,7 @@ User → Streamlit UI → SHA-256 → RSA Sign → IPFS → Ethereum → Verific
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 ### 1 — Install dependencies
 
@@ -86,7 +86,7 @@ streamlit run app.py
 
 ---
 
-## 🔍 How It Works
+## How It Works
 
 **Issuing a certificate**
 1. User submits name, registration number, course, and institution
@@ -101,28 +101,6 @@ streamlit run app.py
 3. `verifyCertificate()` called on-chain
 4. Both checks must pass → **✅ VALID** — either failing → **❌ INVALID**
 
----
-
-## 📄 Smart Contract — `CertChain.sol`
-
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-contract CertChain {
-    mapping(string => bool) private certificates;
-
-    event CertificateStored(string hash, address issuer);
-
-    function storeCertificate(string memory hash) public {
-        certificates[hash] = true;
-        emit CertificateStored(hash, msg.sender);
-    }
-
-    function verifyCertificate(string memory hash) public view returns (bool) {
-        return certificates[hash];
-    }
-}
 ```
 
 | Function | Type | Description |
@@ -138,7 +116,7 @@ contract CertChain {
 
 ---
 
-## 🎯 Use Cases
+## Use Cases
 
 - 🎓 Academic certificates — degrees, diplomas, transcripts
 - 🏢 Professional credentials — licences, certifications, badges
@@ -147,7 +125,7 @@ contract CertChain {
 
 ---
 
-## ⚠️ Important Notes
+## Important Notes
 
 > - IPFS daemon **must be running** before issuing certificates
 > - Always use **Sepolia testnet** to avoid real gas costs
@@ -155,7 +133,7 @@ contract CertChain {
 
 ---
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 - [ ] NFT-based certificates (ERC-721)
 - [ ] MetaMask wallet authentication
@@ -166,6 +144,6 @@ contract CertChain {
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Developed as an open-source blockchain solution for tamper-proof credential verification.
