@@ -101,7 +101,6 @@ streamlit run app.py
 3. `verifyCertificate()` called on-chain
 4. Both checks must pass → **✅ VALID** — either failing → **❌ INVALID**
 
-```
 
 | Function | Type | Description |
 |---|---|---|
@@ -141,9 +140,3 @@ streamlit run app.py
 - [ ] Role-based access control
 - [ ] QR code verification flow
 - [ ] Certificate revocation mechanism
-
----
-
-## Author
-
-Developed as an open-source blockchain solution for tamper-proof credential verification.
