@@ -110,7 +110,7 @@ streamlit run app.py
 
 ---
 
-## 📦 Tech Stack
+## Tech Stack
 
 `Streamlit` · `Python 3.8+` · `Ethereum Sepolia` · `Web3.py` · `IPFS` · `SHA-256` · `RSA-2048` · `Solidity ^0.8.0` · `Remix IDE` · `Infura`
 
@@ -118,10 +118,10 @@ streamlit run app.py
 
 ## Use Cases
 
-- 🎓 Academic certificates — degrees, diplomas, transcripts
-- 🏢 Professional credentials — licences, certifications, badges
-- 🏛️ Government records — identity documents, permits, attestations
-- 🌐 Digital credentials — Web3 achievements, course completions
+- Academic certificates — degrees, diplomas, transcripts
+- Professional credentials — licences, certifications, badges
+- Government records — identity documents, permits, attestations
+- Digital credentials — Web3 achievements, course completions
 
 ---
 
